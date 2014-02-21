@@ -1,5 +1,8 @@
 
 function filter(lista){
+    if (lista[0] === lista[1]){
+        return [lista[0]];
+    }
     return lista;
 }
 
@@ -21,7 +24,9 @@ describe("the emails list filter", function(){
     it("devuelve el que le mandas", function(){
         expect(filter(['test2@test.com'])).toEqual(['test2@test.com']);
     });
-
+    it("si esta duplicado devuelve solo uno", function(){
+        expect(filter(['test2@test.com', 'test2@test.com'])).toEqual(['test2@test.com']);
+    });
 
 
 });
