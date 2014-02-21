@@ -1,6 +1,6 @@
 
 function filter(lista){
-    return ['test@test.com'];
+    return lista;
 }
 
     // caso:
@@ -17,6 +17,9 @@ function filter(lista){
 describe("the emails list filter", function(){
     it("no filtra si no hay duplicado", function(){
         expect(filter(['test@test.com'])).toEqual(['test@test.com']);
+    });
+    it("devuelve el que le mandas", function(){
+        expect(filter(['test2@test.com'])).toEqual(['test2@test.com']);
     });
 
 
